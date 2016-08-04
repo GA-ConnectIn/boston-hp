@@ -1,5 +1,6 @@
 $(document).ready(function() {
   console.log("Fully Loaded!!");
+ google.charts.load("current", {packages:["corechart"]});
 
 
 
@@ -15,7 +16,6 @@ $(document).ready(function() {
  }
 
   function makeGraph(housingData){
-         google.charts.load("current", {packages:["corechart"]});
          google.charts.setOnLoadCallback(drawChart);
           console.log(housingData, "in housingData")
          function drawChart() {
@@ -34,13 +34,16 @@ $(document).ready(function() {
 
       }
 
-
-$(".btn").on("click", function(event) {
-    event.preventDefault()
+function onSubmit(event) {
+  event.preventDefault()
 
   let crim = $(".crim").val();
   let age= $(".age").val();
   let dis = $(".dis").val();
+  let $div = $('#chart_div');
+
+  $div.empty();
+  $('.empty').val('');
 
   let data = {
     crim: crim,
@@ -48,6 +51,7 @@ $(".btn").on("click", function(event) {
     dis:dis
   }
 
+  console.log("get data = ", data);
    $.ajax({
      url: '/find-price',
      type: 'GET',
@@ -57,9 +61,7 @@ $(".btn").on("click", function(event) {
    .done(function(data) {
      console.log("success");
      console.log(data);
-     let $div = $('#chart_div');
-     $div.empty();
-     $('input').val('');
+ 
       $div.text(data.housePrice)
 
    })
@@ -68,16 +70,16 @@ $(".btn").on("click", function(event) {
       console.log("all data ",housingData);
       console.log("houselist is here ?", housingData.houseList)
    })
-   .fail(function() {
-     console.log("error");
+   .fail(function(err) {
+     console.log("error", err);
    })
    .always(function() {
      console.log("complete");
    });
 
+}
 
-
-})
+$(".btn").on("click", onSubmit);
 
 
 
