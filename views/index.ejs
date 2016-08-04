@@ -8,27 +8,30 @@
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700|Glegoo' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Beantown Housing Data</h1>
+      <h1>Boston Housing Data</h1>
     </header>
-
     <div class="mid-body">
-      <form >
+    <h3>Please use our data central to predict the value of homes in Boston using the options below.</h3>
+    <h4>Values closest to 0 in selectors for Crime and Distance are optimal.</h4>
+    <hr>
+      <form>
         <div class="form-group">
-          <h5>Crime</h5>
-          <input type="number" placeholder="select from 0-89" class="crim">
+          <h5>Crime per capita</h5>
+          <input type="number" placeholder="select from 0-89" class="crim empty">
         </div>
         <div class="form-group">
-          <h5>Age</h5>
-          <input type="number" placeholder="select from 0-100" class="age">
+          <h5>Age of Citizens</h5>
+          <input type="number" placeholder="select from 0-100" class="age empty">
         </div>
         <div class="form-group">
           <h5>Distance from employment centers</h5>
-          <input type="number" placeholder="select from 1-15" class="dis">
+          <input type="number" placeholder="select from 1-15" class="dis empty">
         </div>
         <input type="submit" value="Submit" class="btn btn-default">
       </form>

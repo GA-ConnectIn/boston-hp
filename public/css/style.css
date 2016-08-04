@@ -1,9 +1,9 @@
 body {
 
-  /*background:linear-gradient(
+  background:linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url(http://digbza2f4g9qo.cloudfront.net/~/media/IndyCar/News/Standard/2015/05/05-21-Boston-Joins-Circuit-2016-Std.jpg?h=366&la=en&w=610&vs=1&d=20150520T083123) no-repeat center center fixed  ;*/
+    ), url(http://digbza2f4g9qo.cloudfront.net/~/media/IndyCar/News/Standard/2015/05/05-21-Boston-Joins-Circuit-2016-Std.jpg?h=366&la=en&w=610&vs=1&d=20150520T083123) no-repeat center center fixed  ;
 /*    background: url(http://digbza2f4g9qo.cloudfront.net/~/media/IndyCar/News/Standard/2015/05/05-21-Boston-Joins-Circuit-2016-Std.jpg?h=366&la=en&w=610&vs=1&d=20150520T083123);*/
   /*background-color: rgba(0,0,255,0.5);*/
   /*background-color: rgba(255,255,255, 0.5);*/
@@ -12,10 +12,53 @@ body {
   height: 100%;
 }
 
-.mid-body {
-  margin: 13% 32%;
-  width: 50%;
+body {
+  color: #000;
+  font-family: 'Roboto', sans-serif;;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Glegoo', serif;
+}
+
+.container {
+  background-color: rgba(255,255,255,.6);
+  max-width: 75%;
+  padding: 2em;
+}
+
+h5 {
+  font-size: 1.7em;
+}
+
+hr {
+  width: 50%;
+  padding: 1em 0;
+  margin-top: 3em;
+
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+h2 {
+  font-size: 2em;
+}
+
+
+.mid-body {
+  margin-top: 4em;
+}
+
+form {
+  width: 55%;
+margin: 0 auto;
+margin-top: 3em;
+}
+
 
 #chart_div {
   width: 900px;
