@@ -1,15 +1,20 @@
 //const API_URL = 'http://10.242.248.169:7000/predict?crim=2&age=2&dis=5'
-const API_URL = 'http://10.242.248.169:7000/predict'
+const API_URL = process.env.API_URL || 'http://localhost:4000/predict'
+const request         = require('request');
 
+//Calls the API to get the data and put it in res.data
 function getPrice(req,res,next) {
   console.log('req.body = ', req.body);
-  let queryParams = merge(req.body, req.query);
-  let data;
+  let queryData = {
+    crim: req.query.crim,
+    age: req.query.age,
+    dis: req.query.dis
+  };
   
-  console.log('data_url = ', data_url)
+  console.log('data = ', queryData)
   request({
       url: API_URL, //URL to hit
-      qs: queryParams, //Query string data
+      qs: queryData, //Query string data
       method: 'GET', //Specify the method
       json: true
   }, function(error, response, data){
