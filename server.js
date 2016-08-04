@@ -17,6 +17,7 @@ app.use(logger('dev'));
 
 
 app.use('/', homeRoute);
+app.use('/find-price', findPriceRoute);
 
 
 
