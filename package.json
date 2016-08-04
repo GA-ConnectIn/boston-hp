@@ -1,0 +1,29 @@
+{
+  "name": "boston-hp",
+  "version": "1.0.0",
+  "description": "Boston housing prices.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GA-ConnectIn/boston-hp.git"
+  },
+  "author": "Heidi Powers, Luis Lithgow, Joe Fryd, Mike Stenzler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GA-ConnectIn/boston-hp/issues"
+  },
+  "homepage": "https://github.com/GA-ConnectIn/boston-hp#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chart.js": "^2.2.1",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "logger": "0.0.1",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.74.0"
+  }
+}
