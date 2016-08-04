@@ -41,6 +41,8 @@ function onSubmit(event) {
   let age= $(".age").val();
   let dis = $(".dis").val();
   let $div = $('#chart_div');
+  let $secondDiv = $('.second-div')
+  let $p = $('<p>').addClass('price');
 
   $div.empty();
   $('.empty').val('');
@@ -60,9 +62,8 @@ function onSubmit(event) {
    })
    .done(function(data) {
      console.log("success");
-     console.log(data);
- 
-      $div.text(data.housePrice)
+     $p.text("$ " + data.housePrice.toFixed(2) + " Thousand");
+      $secondDiv.append($p);
 
    })
    .then(function(housingData) {

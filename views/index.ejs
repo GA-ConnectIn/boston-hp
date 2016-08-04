@@ -3,27 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Boston Housing Prices</title>
+  <title>Beantown Housing Prices</title>
 
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700|Glegoo' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Beantown Housing Data</h1>
+      <h1>Boston Housing Data</h1>
     </header>
-
     <div class="mid-body">
-      <form >
+    <h3>Please use our data central to predict the value of homes in Boston using the options below.</h3>
+    <h3>The data was contributed in 1973 and has racial tendencies.</h3>
+    <h4><em>Values closest to 0 in selectors for Crime and Distance are optimal.</em></h4>
+    <hr>
+      <form>
         <div class="form-group">
-          <h5>Crime</h5>
+          <h5>Crime per capita</h5>
           <input type="number" placeholder="select from 0-89" class="crim empty">
         </div>
         <div class="form-group">
-          <h5>Age</h5>
+          <h5>Proportion of houses built before 1940</h5>
           <input type="number" placeholder="select from 0-100" class="age empty">
         </div>
         <div class="form-group">
@@ -32,9 +36,10 @@
         </div>
         <input type="submit" value="Submit" class="btn btn-default">
       </form>
-
-
-      <div id="chart_div"></div>
+    </div>
+    <div class="second-div"></div>
+      <div class="chart_div"></div>
+     <div id="chart_div"></div>
     </div>
   </div>
   <script src="js/script.js"></script>
